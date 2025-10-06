@@ -2,7 +2,7 @@ from elasticsearch import Elasticsearch
 
 es = Elasticsearch(
     ["https://localhost:9200"],
-    basic_auth=("elastic", "your_password"),
+    basic_auth=("elastic", "6gzHNHuEBQj_x17n-yux"),
     verify_certs=False,
     ssl_show_warn=False
 )
@@ -16,11 +16,13 @@ es.index (index ="test_index", id =2, document = {"name":"Md Galib Ibn-Kibria", 
 es.index (index ="test_index", id =3, document = {"name":"Muhib", "age":28, "course":"EEE"})
 es.index (index ="test_index", id =4, document = {"name":"Sabbir", "age":26, "course":"BBA"})
 
-doc = es.get(index ="test_index", id =1)
-doc = es.get(index ="test_index", id =2)
-doc = es.get(index ="test_index", id =3)
+doc1 = es.get(index ="test_index", id =1)
+doc2 = es.get(index ="test_index", id =2)
+doc3 = es.get(index ="test_index", id =3)
 
-print(doc['_source'])
+print(doc1['_source'])
+print(doc2['_source'])
+print(doc3['_source'])
 
 # Search documents
 
