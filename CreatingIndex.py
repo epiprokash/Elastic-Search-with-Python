@@ -3,7 +3,7 @@ from elasticsearch import Elasticsearch, helpers
 # Connect to Elasticsearch
 es = Elasticsearch(
     ["https://localhost:9200"],
-    basic_auth=("elastic", "6gzHNHuEBQj_x17n-yux"), 
+    basic_auth=("elastic", "your_password"), 
     verify_certs=False
 )
 
