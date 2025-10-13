@@ -117,4 +117,5 @@ docs = [
 # Bulk insert
 helpers.bulk(es, docs)
 
+# Print 
 print("✅ Documents inserted successfully!")
